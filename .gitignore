@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.poolgrid/
+test-results/
+playwright-report/
+*.tgz

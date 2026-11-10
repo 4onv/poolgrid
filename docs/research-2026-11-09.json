@@ -1,0 +1,107 @@
+{
+  "researchDate": "2026-11-09",
+  "timezone": "America/Chicago",
+  "window": {
+    "startInclusive": "2026-11-09T06:00:00Z",
+    "endExclusive": "2026-11-10T06:00:00Z"
+  },
+  "observedAtUtc": "2026-11-10T14:20:54.100Z",
+  "sources": [
+    {
+      "url": "https://github.com/we-promise/sure/issues/4819",
+      "createdAtUtc": "2026-11-09T17:35:04Z",
+      "updatedAtUtc": "2026-11-09T17:35:04Z",
+      "author": "jjmata",
+      "summary": "Requests bounded scaling with shared database/Redis capacity budgets, including all web processes, worker replicas, deployment overlap and operator headroom. A single operational request; not market-size evidence.",
+      "idea": "PoolGrid"
+    },
+    {
+      "url": "https://github.com/openchamber/openchamber/issues/6614",
+      "createdAtUtc": "2026-11-09T07:23:59Z",
+      "updatedAtUtc": "2026-11-09T07:27:02Z",
+      "summary": "Reports action alternatives collapsing through provider schema conversion. Provider-wide causal claims are the reporter's account, not reproduced here.",
+      "idea": "Tool schema case regression lab"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/issues/108592",
+      "createdAtUtc": "2026-11-09T14:27:45Z",
+      "updatedAtUtc": "2026-11-09T14:28:32Z",
+      "author": "MarcinDudekDev",
+      "summary": "Requests a read-only list of work owned by a session and describes gaps in external process/transcript inference.",
+      "idea": "Session-owned process inventory"
+    }
+  ],
+  "selected": "PoolGrid",
+  "comparison": [
+    {
+      "idea": "PoolGrid",
+      "demand": "One concrete November9 shared-capacity planning request, plus primary pooling/deployment documentation.",
+      "distinctValue": "Interactive replica-combination matrix with explicit holder arithmetic and portable plans. Connection budgeting itself and manifest analysis already exist in ConnBudget.",
+      "demo": "Single offline HTML file with a visible synthetic steady-versus-rollout counterexample.",
+      "discoverability": "Database pooling, autoscaling and rollout budgeting have a clear operations audience; actual reach and adoption remain unproven."
+    },
+    {
+      "idea": "Tool schema case regression lab",
+      "demand": "November9 OpenChamber schema conversion report.",
+      "distinctValue": "Case-based dual-schema checks could explain lost action branches, but LLM JSON Schema, MCP Inspector and schema test/diff tooling overlap strongly.",
+      "demo": "Easy local schema/case demo; establishing actual provider behavior requires version-pinned SDK wire captures.",
+      "discoverability": "Active MCP ecosystem, crowded tooling and previous portfolio's concentration in agent utilities."
+    },
+    {
+      "idea": "Session-owned process inventory",
+      "demand": "November9 built-in inventory feature request.",
+      "distinctValue": "Explicit ownership evidence could help, but ProcessKit and existing process managers supervise wrapped jobs; unwrapped detached work and harness subagent state remain ambiguous.",
+      "demo": "A reliable cross-platform live demo needs ownership instrumentation; an offline process-tree visualization would duplicate prior portfolio work without satisfying the request.",
+      "discoverability": "Strong recognizable problem for agent users, with hard platform-specific reliability boundaries."
+    }
+  ],
+  "competitors": [
+    {
+      "name": "ConnBudget",
+      "url": "https://github.com/buildyourownstuff/ConnBudget/blob/4d0055acba6217521bc7ca3c0546f4bb10ea2f80/README.md",
+      "commit": "4d0055acba6217521bc7ca3c0546f4bb10ea2f80",
+      "observedCapability": "Static connection budgeting, native/Compose/ECS/Kubernetes inputs, scaling/rolling deployment and PgBouncer-aware estimates. Direct conceptual overlap."
+    },
+    {
+      "name": "Database Connection Pool Calculator",
+      "url": "https://www.simplified.tools/calculate_database_connection_pool",
+      "observedCapability": "Interactive holder model, connection budget and surge headroom. A calculator alternative, not verified by benchmark."
+    },
+    {
+      "name": "LLM JSON Schema",
+      "url": "https://github.com/percymcn/llm-json-schema",
+      "observedCapability": "CLI/library/browser provider transforms and rule explanations; substantial overlap with schema tooling candidate."
+    },
+    {
+      "name": "ProcessKit",
+      "url": "https://github.com/ZelAnton/ProcessKit-CLI/blob/main/CHANGELOG.md",
+      "observedCapability": "Registry-backed supervised/detached runs, list/inspect/wait controls; relevant prior art for process inventory candidate."
+    }
+  ],
+  "primaryModelReferences": [
+    "https://node-postgres.com/guides/pool-sizing",
+    "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "https://render.com/docs/scaling"
+  ],
+  "trendContext": {
+    "snapshotAtUtc": "2026-11-10T14:00:53.6868452Z",
+    "source": "https://github.com/trending?since=daily",
+    "repos": [
+      "meta/astryx",
+      "anthropics/skills",
+      "addyosmani/agent-skills",
+      "anthropics/claude-quickstarts",
+      "google-deepmind/mujoco",
+      "we-promise/sure",
+      "homeassistant-ai/ha-mcp",
+      "vercel-labs/agent-browser",
+      "sherlock-project/sherlock",
+      "tokio-rs/topcoat",
+      "ranxianglei/billion-context",
+      "mattpocock/skills"
+    ],
+    "label": "Today's rolling snapshot, not a November9 ranking or observed historical daily star gain."
+  },
+  "portfolioResponse": "All ten existing tracked repositories observed November10 remain at zero stars and forks with no public issues/PRs. No measured traction leader; a broader operations audience is a hypothesis, not a proven better category.",
+  "rationale": "Choose a complete local planning workflow with inspectable arithmetic and a directly visible boundary. Make no unique-technology, performance-sizing or star-growth claim."
+}

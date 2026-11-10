@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "title": "Scale the app. Keep the database in budget.",
+  "description": "Synthetic demonstration · invented limits and pool sizes, not production recommendations.",
+  "resources": [
+    {
+      "id": "primary",
+      "name": "Primary database",
+      "limit": 120,
+      "reserved": 10,
+      "other": 5
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics database",
+      "limit": 40,
+      "reserved": 5,
+      "other": 3
+    }
+  ],
+  "services": [
+    {
+      "id": "web",
+      "name": "Web",
+      "replicas": 2,
+      "maxReplicas": 6,
+      "processes": 2,
+      "pools": [
+        { "id": "main", "resourceId": "primary", "size": 6, "per": "process" }
+      ],
+      "surge": { "type": "percent", "value": 25 }
+    },
+    {
+      "id": "worker",
+      "name": "Worker",
+      "replicas": 1,
+      "maxReplicas": 4,
+      "processes": 1,
+      "pools": [
+        { "id": "jobs", "resourceId": "primary", "size": 4, "per": "process" },
+        {
+          "id": "reports",
+          "resourceId": "analytics",
+          "size": 6,
+          "per": "process"
+        }
+      ],
+      "surge": { "type": "fixed", "value": 1 }
+    },
+    {
+      "id": "scheduler",
+      "name": "Scheduler",
+      "replicas": 1,
+      "maxReplicas": 1,
+      "processes": 1,
+      "pools": [
+        { "id": "main", "resourceId": "primary", "size": 2, "per": "replica" }
+      ],
+      "surge": { "type": "fixed", "value": 0 }
+    }
+  ],
+  "axes": { "x": "web", "y": "worker" }
+}

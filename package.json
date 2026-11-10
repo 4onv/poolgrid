@@ -1,0 +1,38 @@
+{
+  "name": "@4onv/poolgrid",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Explore connection budgets across replica counts and rollout overlap. An offline matrix, CLI and library.",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "poolgrid": "bin/poolgrid.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./core": "./src/core.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "examples",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4onv/poolgrid.git"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node scripts/build-demo.js",
+    "test:browser": "playwright test",
+    "check:package": "node scripts/check-package.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0"
+  }
+}
